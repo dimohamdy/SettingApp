@@ -14,7 +14,6 @@
 @end
 
 @implementation DMDetailViewController
-
 #pragma mark - Managing the detail item
 
 - (void)setDetailItem:(id)newDetailItem
@@ -36,6 +35,8 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
+        NSLog(@"%@",self.detailDescriptionLabel.text );
+
         self.detailDescriptionLabel.text = [self.detailItem description];
     }
 }
@@ -45,6 +46,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,5 +79,9 @@
     [self.navigationItem setLeftBarButtonItem:nil animated:YES];
     self.masterPopoverController = nil;
 }
-
+- (BOOL)splitViewController:(UISplitViewController *)svc shouldHideViewController:
+(UIViewController *)vc inOrientation:(UIInterfaceOrientation)orientation
+{
+    return NO;
+}
 @end

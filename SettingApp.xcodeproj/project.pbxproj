@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D38C6C9192F2FEE0073F7A2 /* DMSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D38C6C8192F2FEE0073F7A2 /* DMSettingItem.m */; };
+		3D38C6CD192F30850073F7A2 /* DMItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D38C6CB192F30850073F7A2 /* DMItemTableViewCell.m */; };
+		3D38C6CE192F30850073F7A2 /* DMItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D38C6CC192F30850073F7A2 /* DMItemTableViewCell.xib */; };
+		3D38C6D8192F362E0073F7A2 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3D38C6D0192F362E0073F7A2 /* 1.jpeg */; };
+		3D38C6D9192F362E0073F7A2 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3D38C6D1192F362E0073F7A2 /* 2.jpeg */; };
+		3D38C6DA192F362E0073F7A2 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3D38C6D2192F362E0073F7A2 /* 3.jpeg */; };
+		3D38C6DB192F362E0073F7A2 /* 4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3D38C6D3192F362E0073F7A2 /* 4.jpeg */; };
+		3D38C6DC192F362E0073F7A2 /* 5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3D38C6D4192F362E0073F7A2 /* 5.gif */; };
+		3D38C6DD192F362E0073F7A2 /* 6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3D38C6D5192F362E0073F7A2 /* 6.gif */; };
+		3D38C6DE192F362E0073F7A2 /* 7.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3D38C6D6192F362E0073F7A2 /* 7.gif */; };
+		3D38C6DF192F362E0073F7A2 /* 8.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3D38C6D7192F362E0073F7A2 /* 8.gif */; };
 		8CAA30F4192EE3D700366D85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAA30F3192EE3D700366D85 /* UIKit.framework */; };
 		8CAA30F6192EE3D700366D85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAA30F5192EE3D700366D85 /* Foundation.framework */; };
 		8CAA30F8192EE3D700366D85 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAA30F7192EE3D700366D85 /* CoreGraphics.framework */; };
@@ -25,6 +36,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D38C6C7192F2FEE0073F7A2 /* DMSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSettingItem.h; sourceTree = "<group>"; };
+		3D38C6C8192F2FEE0073F7A2 /* DMSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSettingItem.m; sourceTree = "<group>"; };
+		3D38C6CA192F30850073F7A2 /* DMItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMItemTableViewCell.h; sourceTree = "<group>"; };
+		3D38C6CB192F30850073F7A2 /* DMItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMItemTableViewCell.m; sourceTree = "<group>"; };
+		3D38C6CC192F30850073F7A2 /* DMItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMItemTableViewCell.xib; sourceTree = "<group>"; };
+		3D38C6D0192F362E0073F7A2 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		3D38C6D1192F362E0073F7A2 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
+		3D38C6D2192F362E0073F7A2 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
+		3D38C6D3192F362E0073F7A2 /* 4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpeg; sourceTree = "<group>"; };
+		3D38C6D4192F362E0073F7A2 /* 5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 5.gif; sourceTree = "<group>"; };
+		3D38C6D5192F362E0073F7A2 /* 6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 6.gif; sourceTree = "<group>"; };
+		3D38C6D6192F362E0073F7A2 /* 7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 7.gif; sourceTree = "<group>"; };
+		3D38C6D7192F362E0073F7A2 /* 8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 8.gif; sourceTree = "<group>"; };
 		8CAA30EF192EE3D700366D85 /* SettingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SettingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAA30F3192EE3D700366D85 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8CAA30F5192EE3D700366D85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,6 +86,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D38C6CF192F362E0073F7A2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				3D38C6D0192F362E0073F7A2 /* 1.jpeg */,
+				3D38C6D1192F362E0073F7A2 /* 2.jpeg */,
+				3D38C6D2192F362E0073F7A2 /* 3.jpeg */,
+				3D38C6D3192F362E0073F7A2 /* 4.jpeg */,
+				3D38C6D4192F362E0073F7A2 /* 5.gif */,
+				3D38C6D5192F362E0073F7A2 /* 6.gif */,
+				3D38C6D6192F362E0073F7A2 /* 7.gif */,
+				3D38C6D7192F362E0073F7A2 /* 8.gif */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		8CAA30E4192EE3D500366D85 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +141,12 @@
 				8CAA3114192EE3D700366D85 /* DMMasterViewController_iPad.xib */,
 				8CAA3117192EE3D700366D85 /* DMDetailViewController_iPhone.xib */,
 				8CAA311A192EE3D700366D85 /* DMDetailViewController_iPad.xib */,
+				3D38C6CA192F30850073F7A2 /* DMItemTableViewCell.h */,
+				3D38C6CB192F30850073F7A2 /* DMItemTableViewCell.m */,
+				3D38C6CC192F30850073F7A2 /* DMItemTableViewCell.xib */,
+				3D38C6C7192F2FEE0073F7A2 /* DMSettingItem.h */,
+				3D38C6C8192F2FEE0073F7A2 /* DMSettingItem.m */,
+				3D38C6CF192F362E0073F7A2 /* images */,
 				8CAA30FA192EE3D700366D85 /* Supporting Files */,
 			);
 			path = SettingApp;
@@ -173,14 +218,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D38C6DE192F362E0073F7A2 /* 7.gif in Resources */,
+				3D38C6DB192F362E0073F7A2 /* 4.jpeg in Resources */,
 				8CAA30FE192EE3D700366D85 /* InfoPlist.strings in Resources */,
+				3D38C6DC192F362E0073F7A2 /* 5.gif in Resources */,
+				3D38C6DF192F362E0073F7A2 /* 8.gif in Resources */,
+				3D38C6DD192F362E0073F7A2 /* 6.gif in Resources */,
 				8CAA3106192EE3D700366D85 /* Default.png in Resources */,
 				8CAA3108192EE3D700366D85 /* Default@2x.png in Resources */,
 				8CAA310A192EE3D700366D85 /* Default-568h@2x.png in Resources */,
 				8CAA3113192EE3D700366D85 /* DMMasterViewController_iPhone.xib in Resources */,
+				3D38C6D8192F362E0073F7A2 /* 1.jpeg in Resources */,
 				8CAA3116192EE3D700366D85 /* DMMasterViewController_iPad.xib in Resources */,
 				8CAA3119192EE3D700366D85 /* DMDetailViewController_iPhone.xib in Resources */,
+				3D38C6CE192F30850073F7A2 /* DMItemTableViewCell.xib in Resources */,
+				3D38C6DA192F362E0073F7A2 /* 3.jpeg in Resources */,
 				8CAA311C192EE3D700366D85 /* DMDetailViewController_iPad.xib in Resources */,
+				3D38C6D9192F362E0073F7A2 /* 2.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +248,8 @@
 				8CAA3100192EE3D700366D85 /* main.m in Sources */,
 				8CAA3104192EE3D700366D85 /* DMAppDelegate.m in Sources */,
 				8CAA310D192EE3D700366D85 /* DMMasterViewController.m in Sources */,
+				3D38C6CD192F30850073F7A2 /* DMItemTableViewCell.m in Sources */,
+				3D38C6C9192F2FEE0073F7A2 /* DMSettingItem.m in Sources */,
 				8CAA3110192EE3D700366D85 /* DMDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +358,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SettingApp/SettingApp-Prefix.pch";
 				INFOPLIST_FILE = "SettingApp/SettingApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -313,6 +370,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SettingApp/SettingApp-Prefix.pch";
 				INFOPLIST_FILE = "SettingApp/SettingApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -337,6 +395,7 @@
 				8CAA3121192EE3D700366D85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

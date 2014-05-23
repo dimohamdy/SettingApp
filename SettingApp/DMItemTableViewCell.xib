@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DMItemTableViewCell" id="R04-V0-p8X" customClass="DMItemTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R04-V0-p8X" id="cvl-KX-eFY">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jz8-N0-sps">
+                        <rect key="frame" x="10" y="4" width="40" height="35"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="XQu-ey-nra"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcA-xO-aG3">
+                        <rect key="frame" x="58" y="11" width="166" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mb5-ig-McC">
+                        <rect key="frame" x="240" y="0.0" width="60" height="35"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jxk-El-wZx">
+                                <rect key="frame" x="6" y="2" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="3UH-W3-lS1"/>
+                                    <constraint firstAttribute="width" constant="49" id="nOc-eN-UP0"/>
+                                </constraints>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87450987099999999" green="1" blue="0.3058823645" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="a3T-Ri-ckO"/>
+                            <constraint firstItem="Jxk-El-wZx" firstAttribute="centerY" secondItem="Mb5-ig-McC" secondAttribute="centerY" id="iTX-iS-BHN"/>
+                            <constraint firstAttribute="height" constant="35" id="njP-SE-V4w"/>
+                            <constraint firstAttribute="centerX" secondItem="Jxk-El-wZx" secondAttribute="centerX" id="r3F-26-ky6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="EcA-xO-aG3" secondAttribute="centerY" id="32X-VP-SVp"/>
+                    <constraint firstAttribute="centerY" secondItem="Jz8-N0-sps" secondAttribute="centerY" id="7f0-Pd-tBC"/>
+                    <constraint firstItem="Mb5-ig-McC" firstAttribute="top" secondItem="cvl-KX-eFY" secondAttribute="top" id="7qf-oB-m2u"/>
+                    <constraint firstItem="Jz8-N0-sps" firstAttribute="top" secondItem="cvl-KX-eFY" secondAttribute="top" constant="4" id="TYF-T0-bx8"/>
+                    <constraint firstAttribute="trailing" secondItem="Mb5-ig-McC" secondAttribute="trailing" constant="20" id="YNm-JM-FV8"/>
+                    <constraint firstItem="EcA-xO-aG3" firstAttribute="leading" secondItem="Jz8-N0-sps" secondAttribute="trailing" constant="8" id="dTq-fI-5dr"/>
+                    <constraint firstItem="Jz8-N0-sps" firstAttribute="leading" secondItem="cvl-KX-eFY" secondAttribute="leading" constant="10" id="j8B-L2-DXE"/>
+                    <constraint firstItem="Mb5-ig-McC" firstAttribute="leading" secondItem="EcA-xO-aG3" secondAttribute="trailing" constant="16" id="qRs-2O-iDa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="itemControl" destination="Mb5-ig-McC" id="EYU-cB-WbI"/>
+                <outlet property="itemImage" destination="Jz8-N0-sps" id="RZw-Lu-Qwh"/>
+                <outlet property="itemLable" destination="EcA-xO-aG3" id="n1d-r5-ta3"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

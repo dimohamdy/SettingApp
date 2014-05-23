@@ -9,13 +9,24 @@
 #import "DMMasterViewController.h"
 
 #import "DMDetailViewController.h"
-
+#import "DMItemTableViewCell.h"
+#import "DMSettingItem.h"
 @interface DMMasterViewController () {
     NSMutableArray *_objects;
 }
 @end
 
-@implementation DMMasterViewController
+@implementation DMMasterViewController{
+    
+    NSMutableArray*items;
+    NSArray*imageNames;
+    NSArray*texts;
+    NSArray*controls;
+    
+    
+    
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,10 +45,28 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+//
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+//    self.navigationItem.rightBarButtonItem = addButton;
+    
+    
+    self.detailViewController = (DMDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    /*********************************************/
+    
+    imageNames=@[@"1.jpeg",@"2.jpeg",@"3.jpeg",@"4.jpeg",@"5.gif",@"6.gif",@"7.gif",@"8.gif"];
+    texts=@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8"];
+    controls=@[[NSNumber numberWithBool:YES],[NSNumber numberWithBool:NO],[NSNumber numberWithBool:YES],[NSNumber numberWithBool:NO],[NSNumber numberWithBool:YES],[NSNumber numberWithBool:NO],[NSNumber numberWithBool:YES],[NSNumber numberWithBool:NO]];
+    
+    items=[[NSMutableArray alloc]init];
+    for (int count=1; count<8; count++) {
+        
+        DMSettingItem*objDMSettingItem=[[DMSettingItem alloc]initWithImageName:[imageNames objectAtIndex:count] AndWithlblText:[texts objectAtIndex:count] AndWithDetailsOrSwitch:[[controls objectAtIndex:count] intValue]];
+        
+        
+        [items addObject:objDMSettingItem];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,26 +94,57 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+//    return _objects.count;
+    NSLog(@"%d",items.count);
+    return items.count;
+
 }
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+//    static NSString *CellIdentifier = @"Cell";
+//    
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    if (cell == nil) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+//        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+//            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//        }
+//    }
+//
+//
+//    NSDate *object = _objects[indexPath.row];
+//    cell.textLabel.text = [object description];
+//    return cell;
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        }
+    
+    static NSString *SimpleTableIdentifier = @"DMItemTableViewCell";
+    DMItemTableViewCell *cell = (DMItemTableViewCell*)[tableView dequeueReusableCellWithIdentifier: SimpleTableIdentifier];
+    
+    if (cell == nil)
+    {
+        //cell = [[DMItemTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DMItemTableViewCell"];
+        
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DMItemTableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+        
     }
-
-
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    DMSettingItem*temp= (DMSettingItem*)[items objectAtIndex:indexPath.row];
+    cell.itemImage.image=[UIImage imageNamed:temp.imageName];
+    cell.itemLable.text=temp.lblText;
+    if (temp.isDetails) {
+        
+        //  UISwitch *toggleSwitch=[[UISwitch alloc]initWithFrame:CGRectZero];
+        [cell.itemControl  setHidden:YES];
+    }else{
+        [cell.itemControl  setHidden:NO];
+        
+    }
+    
+    
     return cell;
+
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -121,15 +181,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDate *object = _objects[indexPath.row];
+   // NSDate *object = _objects[indexPath.row];
+    DMSettingItem *object =  items[indexPath.row];
+
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 	    if (!self.detailViewController) {
 	        self.detailViewController = [[DMDetailViewController alloc] initWithNibName:@"DMDetailViewController_iPhone" bundle:nil];
 	    }
-	    self.detailViewController.detailItem = object;
+        self.detailViewController.detailDescriptionLabel.text = object.lblText;
+        
+	    //self.detailViewController.detailItem = object;
         [self.navigationController pushViewController:self.detailViewController animated:YES];
     } else {
-        self.detailViewController.detailItem = object;
+        self.detailViewController.detailDescriptionLabel.text = object.lblText;
+        //self.detailViewController.detailItem = object;
+        NSLog(@"%@",self.detailViewController.detailDescriptionLabel.text );
     }
 }
 
