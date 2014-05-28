@@ -11,6 +11,7 @@
 #import "DMDetailViewController.h"
 #import "DMItemTableViewCell.h"
 #import "DMSettingItem.h"
+#import "DMMultiValueViewController.h"
 @interface DMMasterViewController () {
     NSMutableArray *_objects;
 }
@@ -61,7 +62,7 @@
     items=[[NSMutableArray alloc]init];
     for (int count=1; count<8; count++) {
         
-        DMSettingItem*objDMSettingItem=[[DMSettingItem alloc]initWithImageName:[imageNames objectAtIndex:count] AndWithlblText:[texts objectAtIndex:count] AndWithDetailsOrSwitch:[[controls objectAtIndex:count] intValue]];
+        DMSettingItem*objDMSettingItem=[[DMSettingItem alloc]initWithImageName:[imageNames objectAtIndex:count] AndWithlblText:[texts objectAtIndex:count] AndWithDetailsOrSwitch:[[controls objectAtIndex:count] intValue]   AndWithClassName:[DMMultiValueViewController class] ];
         
         
         [items addObject:objDMSettingItem];
@@ -144,6 +145,7 @@
         //in switch button
         [cell.itemSwitch  setHidden:NO];
         [cell.itemDetailsLable  setHidden:YES];
+        cell.accessoryType=UITableViewCellAccessoryNone;
         
         
         

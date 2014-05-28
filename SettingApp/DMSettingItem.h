@@ -12,7 +12,10 @@
 @property (nonatomic, strong) NSString *imageName;
 @property (nonatomic, strong) NSString *lblText;
 @property (nonatomic) BOOL isDetails ;
+@property (nonatomic) Class className ;
 
 
--(id) initWithImageName:(NSString*)name AndWithlblText:(NSString*)txt AndWithDetailsOrSwitch:(int)control ;
+
+
+-(id) initWithImageName:(NSString*)name AndWithlblText:(NSString*)txt AndWithDetailsOrSwitch:(int)control AndWithClassName:(Class)className ;
 @end

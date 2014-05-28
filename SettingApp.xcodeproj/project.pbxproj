@@ -33,6 +33,9 @@
 		8CAA3116192EE3D700366D85 /* DMMasterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA3114192EE3D700366D85 /* DMMasterViewController_iPad.xib */; };
 		8CAA3119192EE3D700366D85 /* DMDetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA3117192EE3D700366D85 /* DMDetailViewController_iPhone.xib */; };
 		8CAA311C192EE3D700366D85 /* DMDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA311A192EE3D700366D85 /* DMDetailViewController_iPad.xib */; };
+		FE556E361936270500F9824B /* DMMultiValueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE556E341936270500F9824B /* DMMultiValueViewController.m */; };
+		FE556E371936270500F9824B /* DMMultiValueViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE556E351936270500F9824B /* DMMultiValueViewController_iPad.xib */; };
+		FE556E3A1936278D00F9824B /* DMMultiValueViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE556E381936278D00F9824B /* DMMultiValueViewController_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,10 @@
 		8CAA3115192EE3D700366D85 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DMMasterViewController_iPad.xib; sourceTree = "<group>"; };
 		8CAA3118192EE3D700366D85 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DMDetailViewController_iPhone.xib; sourceTree = "<group>"; };
 		8CAA311B192EE3D700366D85 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DMDetailViewController_iPad.xib; sourceTree = "<group>"; };
+		FE556E331936270500F9824B /* DMMultiValueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMultiValueViewController.h; sourceTree = "<group>"; };
+		FE556E341936270500F9824B /* DMMultiValueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMultiValueViewController.m; sourceTree = "<group>"; };
+		FE556E351936270500F9824B /* DMMultiValueViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMMultiValueViewController_iPad.xib; sourceTree = "<group>"; };
+		FE556E391936278D00F9824B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DMMultiValueViewController_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +142,10 @@
 				8CAA3103192EE3D700366D85 /* DMAppDelegate.m */,
 				8CAA310B192EE3D700366D85 /* DMMasterViewController.h */,
 				8CAA310C192EE3D700366D85 /* DMMasterViewController.m */,
+				FE556E331936270500F9824B /* DMMultiValueViewController.h */,
+				FE556E341936270500F9824B /* DMMultiValueViewController.m */,
+				FE556E381936278D00F9824B /* DMMultiValueViewController_iPhone.xib */,
+				FE556E351936270500F9824B /* DMMultiValueViewController_iPad.xib */,
 				8CAA310E192EE3D700366D85 /* DMDetailViewController.h */,
 				8CAA310F192EE3D700366D85 /* DMDetailViewController.m */,
 				8CAA3111192EE3D700366D85 /* DMMasterViewController_iPhone.xib */,
@@ -223,6 +234,7 @@
 				8CAA30FE192EE3D700366D85 /* InfoPlist.strings in Resources */,
 				3D38C6DC192F362E0073F7A2 /* 5.gif in Resources */,
 				3D38C6DF192F362E0073F7A2 /* 8.gif in Resources */,
+				FE556E3A1936278D00F9824B /* DMMultiValueViewController_iPhone.xib in Resources */,
 				3D38C6DD192F362E0073F7A2 /* 6.gif in Resources */,
 				8CAA3106192EE3D700366D85 /* Default.png in Resources */,
 				8CAA3108192EE3D700366D85 /* Default@2x.png in Resources */,
@@ -233,6 +245,7 @@
 				8CAA3119192EE3D700366D85 /* DMDetailViewController_iPhone.xib in Resources */,
 				3D38C6CE192F30850073F7A2 /* DMItemTableViewCell.xib in Resources */,
 				3D38C6DA192F362E0073F7A2 /* 3.jpeg in Resources */,
+				FE556E371936270500F9824B /* DMMultiValueViewController_iPad.xib in Resources */,
 				8CAA311C192EE3D700366D85 /* DMDetailViewController_iPad.xib in Resources */,
 				3D38C6D9192F362E0073F7A2 /* 2.jpeg in Resources */,
 			);
@@ -249,6 +262,7 @@
 				8CAA3104192EE3D700366D85 /* DMAppDelegate.m in Sources */,
 				8CAA310D192EE3D700366D85 /* DMMasterViewController.m in Sources */,
 				3D38C6CD192F30850073F7A2 /* DMItemTableViewCell.m in Sources */,
+				FE556E361936270500F9824B /* DMMultiValueViewController.m in Sources */,
 				3D38C6C9192F2FEE0073F7A2 /* DMSettingItem.m in Sources */,
 				8CAA3110192EE3D700366D85 /* DMDetailViewController.m in Sources */,
 			);
@@ -295,6 +309,14 @@
 				8CAA311B192EE3D700366D85 /* en */,
 			);
 			name = DMDetailViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		FE556E381936278D00F9824B /* DMMultiValueViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE556E391936278D00F9824B /* en */,
+			);
+			name = DMMultiValueViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
