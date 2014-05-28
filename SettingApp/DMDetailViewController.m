@@ -5,7 +5,7 @@
 //  Created by AhmedHamdy on 5/23/14.
 //  Copyright (c) 2014 AhmedHamdy. All rights reserved.
 //
-
+#import "DMSettingItem.h"
 #import "DMDetailViewController.h"
 
 @interface DMDetailViewController ()
@@ -14,6 +14,7 @@
 @end
 
 @implementation DMDetailViewController
+@synthesize detailDescriptionLabel;
 #pragma mark - Managing the detail item
 
 - (void)setDetailItem:(id)newDetailItem
@@ -33,11 +34,8 @@
 - (void)configureView
 {
     // Update the user interface for the detail item.
-
     if (self.detailItem) {
-        NSLog(@"%@",self.detailDescriptionLabel.text );
-
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        self.detailDescriptionLabel.text = ((DMSettingItem*)self.detailItem).lblText;
     }
 }
 
@@ -59,7 +57,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Detail", @"Detail");
+        //self.title = NSLocalizedString(@"Detail", @"Detail");
+        //[self configureView];
+
     }
     return self;
 }

@@ -35,7 +35,7 @@
         self.title = NSLocalizedString(@"Master", @"Master");
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
             self.clearsSelectionOnViewWillAppear = NO;
-            //self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
+            self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
         }
     }
     return self;
@@ -193,11 +193,13 @@
     if (object.isDetails) {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 	    if (!self.detailViewController) {
+            //self.detailViewController.detailItem=object;
 	        self.detailViewController = [[DMDetailViewController alloc] initWithNibName:@"DMDetailViewController_iPhone" bundle:nil];
+
 	    }
-        self.detailViewController.detailDescriptionLabel.text = object.lblText;
-        
+        //self.detailViewController.detailDescriptionLabel.text = object.lblText;
 	    //self.detailViewController.detailItem = object;
+        [self.detailViewController setDetailItem:object];
         [self.navigationController pushViewController:self.detailViewController animated:YES];
     } else {
         self.detailViewController.detailDescriptionLabel.text = object.lblText;
