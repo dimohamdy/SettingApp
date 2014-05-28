@@ -11,7 +11,7 @@
 @interface DMSettingItem : NSObject
 @property (nonatomic, strong) NSString *imageName;
 @property (nonatomic, strong) NSString *lblText;
-@property (nonatomic) int isDetails ;
+@property (nonatomic) BOOL isDetails ;
 
 
 -(id) initWithImageName:(NSString*)name AndWithlblText:(NSString*)txt AndWithDetailsOrSwitch:(int)control ;

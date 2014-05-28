@@ -9,7 +9,7 @@
 #import "DMItemTableViewCell.h"
 
 @implementation DMItemTableViewCell
-@synthesize itemControl,itemImage,itemLable;
+@synthesize itemControl,itemImage,itemLable,itemDetailsLable,itemSwitch;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

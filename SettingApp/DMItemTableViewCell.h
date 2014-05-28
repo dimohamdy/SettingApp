@@ -12,5 +12,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *itemImage;
 @property (strong, nonatomic) IBOutlet UILabel *itemLable;
 @property (strong, nonatomic) IBOutlet UIView *itemControl;
+@property (strong, nonatomic) IBOutlet UILabel *itemDetailsLable;
+@property (strong, nonatomic) IBOutlet UISwitch *itemSwitch;
 
 @end

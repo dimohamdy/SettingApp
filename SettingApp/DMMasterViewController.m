@@ -35,7 +35,7 @@
         self.title = NSLocalizedString(@"Master", @"Master");
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
             self.clearsSelectionOnViewWillAppear = NO;
-            self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
+            //self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
         }
     }
     return self;
@@ -135,10 +135,17 @@
     cell.itemLable.text=temp.lblText;
     if (temp.isDetails) {
         
-        //  UISwitch *toggleSwitch=[[UISwitch alloc]initWithFrame:CGRectZero];
-        [cell.itemControl  setHidden:YES];
+        //in case of  lable
+
+        [cell.itemDetailsLable  setHidden:NO];
+        [cell.itemSwitch  setHidden:YES];
+
     }else{
-        [cell.itemControl  setHidden:NO];
+        //in switch button
+        [cell.itemSwitch  setHidden:NO];
+        [cell.itemDetailsLable  setHidden:YES];
+        
+        
         
     }
     
@@ -183,7 +190,7 @@
 {
    // NSDate *object = _objects[indexPath.row];
     DMSettingItem *object =  items[indexPath.row];
-
+    if (object.isDetails) {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 	    if (!self.detailViewController) {
 	        self.detailViewController = [[DMDetailViewController alloc] initWithNibName:@"DMDetailViewController_iPhone" bundle:nil];
@@ -197,6 +204,7 @@
         //self.detailViewController.detailItem = object;
         NSLog(@"%@",self.detailViewController.detailDescriptionLabel.text );
     }
+        }
 }
 
 @end
