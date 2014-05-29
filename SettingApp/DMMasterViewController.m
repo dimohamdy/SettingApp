@@ -12,6 +12,7 @@
 #import "DMItemTableViewCell.h"
 #import "DMSettingItem.h"
 #import "DMMultiValueViewController.h"
+#import "DMSecMultiValueViewController.h"
 @interface DMMasterViewController () {
     NSMutableArray *_objects;
 }
@@ -23,7 +24,7 @@
     NSArray*imageNames;
     NSArray*texts;
     NSArray*controls;
-    
+    NSArray*className;
     
     
 }
@@ -36,7 +37,7 @@
         self.title = NSLocalizedString(@"Master", @"Master");
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
             self.clearsSelectionOnViewWillAppear = NO;
-            self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
+            //self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
         }
     }
     return self;
@@ -58,11 +59,13 @@
     imageNames=@[@"1.jpeg",@"2.jpeg",@"3.jpeg",@"4.jpeg",@"5.gif",@"6.gif",@"7.gif",@"8.gif"];
     texts=@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8"];
     controls=@[[NSNumber numberWithBool:YES],[NSNumber numberWithBool:NO],[NSNumber numberWithBool:YES],[NSNumber numberWithBool:NO],[NSNumber numberWithBool:YES],[NSNumber numberWithBool:NO],[NSNumber numberWithBool:YES],[NSNumber numberWithBool:NO]];
+    className=@[[DMSecMultiValueViewController class] ,[DMSecMultiValueViewController class],[DMSecMultiValueViewController class],[DMSecMultiValueViewController class],[DMSecMultiValueViewController class],[DMSecMultiValueViewController class],[DMMultiValueViewController class],[DMSecMultiValueViewController class]];
+    
     
     items=[[NSMutableArray alloc]init];
     for (int count=1; count<8; count++) {
         
-        DMSettingItem*objDMSettingItem=[[DMSettingItem alloc]initWithImageName:[imageNames objectAtIndex:count] AndWithlblText:[texts objectAtIndex:count] AndWithDetailsOrSwitch:[[controls objectAtIndex:count] intValue]   AndWithClassName:[DMMultiValueViewController class] ];
+        DMSettingItem*objDMSettingItem=[[DMSettingItem alloc]initWithImageName:[imageNames objectAtIndex:count] AndWithlblText:[texts objectAtIndex:count] AndWithDetailsOrSwitch:[[controls objectAtIndex:count] intValue]   AndWithClassName:[className objectAtIndex:count] ];
         
         
         [items addObject:objDMSettingItem];
@@ -97,8 +100,8 @@
 {
 //    return _objects.count;
     NSLog(@"%d",items.count);
-    return items.count;
-
+return items.count;
+   // return 1;
 }
 
 // Customize the appearance of table view cells.
@@ -191,22 +194,31 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
    // NSDate *object = _objects[indexPath.row];
-    DMSettingItem *object =  items[indexPath.row];
-    if (object.isDetails) {
+    DMSettingItem *objDMSettingItem =  items[indexPath.row];
+    if (objDMSettingItem.isDetails) {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-	    if (!self.detailViewController) {
-            //self.detailViewController.detailItem=object;
-	        self.detailViewController = [[DMDetailViewController alloc] initWithNibName:@"DMDetailViewController_iPhone" bundle:nil];
+//	    if (!self.detailViewController) {
+//            //self.detailViewController.detailItem=object;
+//	        self.detailViewController = [[DMDetailViewController alloc] initWithNibName:@"DMDetailViewController_iPhone" bundle:nil];
+//
+//	    }
+//        //self.detailViewController.detailDescriptionLabel.text = objDMSettingItem.lblText;
+//	    //self.detailViewController.detailItem = objDMSettingItem;
+//        [self.detailViewController setDetailItem:objDMSettingItem];
+       // id object = [objDMSettingItem.className alloc] init];
+        
+        
+   UIViewController*objUIViewController=(UIViewController*)[[objDMSettingItem.className alloc]initWithNibName:[NSString stringWithFormat:@"%@%s", objDMSettingItem.className, "_iPhone"] bundle:nil];
+        [self.navigationController pushViewController:objUIViewController animated:YES];
 
-	    }
-        //self.detailViewController.detailDescriptionLabel.text = object.lblText;
-	    //self.detailViewController.detailItem = object;
-        [self.detailViewController setDetailItem:object];
-        [self.navigationController pushViewController:self.detailViewController animated:YES];
+        //[self.navigationController pushViewController:self.detailViewController animated:YES];
     } else {
-        self.detailViewController.detailDescriptionLabel.text = object.lblText;
-        //self.detailViewController.detailItem = object;
-        NSLog(@"%@",self.detailViewController.detailDescriptionLabel.text );
+//        self.detailViewController.detailDescriptionLabel.text = object.lblText;
+//        //self.detailViewController.detailItem = object;
+//        NSLog(@"%@",self.detailViewController.detailDescriptionLabel.text );
+        
+        UIViewController*objUIViewController=(UIViewController*)[[objDMSettingItem.className alloc]initWithNibName:[NSString stringWithFormat:@"%@%s", objDMSettingItem.className, "_iPad"] bundle:nil];
+        [self.navigationController pushViewController:objUIViewController animated:YES];
     }
         }
 }

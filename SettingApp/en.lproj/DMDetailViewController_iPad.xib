@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="testtesttest" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="81">
-                    <rect key="frame" x="20" y="504" width="728" height="17"/>
+                    <rect key="frame" x="20" y="503" width="728" height="18"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" size="system"/>
@@ -26,9 +26,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="81" firstAttribute="leading" secondItem="8" secondAttribute="leading" constant="20" symbolic="YES" id="94"/>
-                <constraint firstAttribute="trailing" secondItem="81" secondAttribute="trailing" constant="20" symbolic="YES" id="97"/>
-                <constraint firstItem="81" firstAttribute="centerY" secondItem="8" secondAttribute="centerY" id="98"/>
+                <constraint firstAttribute="trailing" secondItem="81" secondAttribute="trailing" constant="20" id="CBA-kX-QDH"/>
+                <constraint firstItem="81" firstAttribute="leading" secondItem="8" secondAttribute="leading" constant="20" id="fIe-zo-2g9"/>
+                <constraint firstAttribute="bottom" secondItem="81" secondAttribute="bottom" constant="503" id="kua-B9-nPU"/>
+                <constraint firstItem="81" firstAttribute="top" secondItem="8" secondAttribute="top" constant="503" id="tLz-vT-VNC"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
         </view>

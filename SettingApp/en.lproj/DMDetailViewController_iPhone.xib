@@ -27,9 +27,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="4" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="7"/>
-                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" constant="20" symbolic="YES" id="9"/>
-                <constraint firstItem="4" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" id="11"/>
+                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" constant="20" id="4Hl-MN-JHY"/>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="FEr-j6-BaK"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" constant="276" id="KbT-Hf-k75"/>
+                <constraint firstAttribute="bottom" secondItem="4" secondAttribute="bottom" constant="275" id="xbK-TK-Cyt"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
