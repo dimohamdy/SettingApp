@@ -213,12 +213,11 @@ return items.count;
 
         //[self.navigationController pushViewController:self.detailViewController animated:YES];
     } else {
-//        self.detailViewController.detailDescriptionLabel.text = object.lblText;
-//        //self.detailViewController.detailItem = object;
-//        NSLog(@"%@",self.detailViewController.detailDescriptionLabel.text );
+        DMDetailViewController*objUIViewController=(DMDetailViewController*)[[objDMSettingItem.className alloc]initWithNibName:[NSString stringWithFormat:@"%@%s", objDMSettingItem.className, "_iPad"] bundle:nil];
         
-        UIViewController*objUIViewController=(UIViewController*)[[objDMSettingItem.className alloc]initWithNibName:[NSString stringWithFormat:@"%@%s", objDMSettingItem.className, "_iPad"] bundle:nil];
-        [self.navigationController pushViewController:objUIViewController animated:YES];
+        self.splitViewController.delegate = objUIViewController;
+        
+        [((UINavigationController*)[self.splitViewController.viewControllers lastObject]) pushViewController:objUIViewController animated:YES];
     }
         }
 }
